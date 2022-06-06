@@ -1,26 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from './logo.svg';
-import './App.css';
-import TodoForm from "/react-amplify-app/src/components/TodoForm.js"
-import TodoList from "/react-amplify-app/src/components/TodoList.js"
-
+import './App.css'; 
 function App() {
-  const [todos, setTodos] = useState([]);
-  
-  function addTodo(todo){
-    setTodos([todo,...todos]);
-  }
-  
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Todo</p>
-        <TodoForm addTodo={addTodo}/>
-        <TodoList todos={todos} />
+      <div className = "App">
+      < header className = "App-header" >
+        <img src={logo} className = "App-logo" alt="logo"/>
+        <h1> Hello From V2</h1>
       </header>
     </div>
   );
 }
-
 export default App;
-
