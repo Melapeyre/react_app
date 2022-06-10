@@ -24,8 +24,5 @@ function App() {
       </header>
     </div>
   );
-      function getFormData (){
-        console.log(data)
-  }
 }
 export default App;
