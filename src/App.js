@@ -5,7 +5,7 @@ function App() {
   const handleSubmit = (e) => {
     e.preventDefault();
     const sku=e.target.SKU.value;
-    console.log("sku");
+    console.log(sku);
   }
   return (
       <div className = "App">
