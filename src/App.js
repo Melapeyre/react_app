@@ -25,4 +25,13 @@ function App() {
     </div>
   );
 }
+
+function getFormData (){
+  console.log(data)
+}
+
+//function sendFormData(){
+  //XMLHttpRequest.send()
+//}
+
 export default App;
