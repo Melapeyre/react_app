@@ -4,6 +4,7 @@ import './App.css';
 function App() {
   const handleSubmit = event => {
     event.preventDefault();
+    const data = new FormData (event.target);
     alert('You have submitted the form.')
   }
   return (
@@ -14,11 +15,11 @@ function App() {
         <form onSubmit={handleSubmit}> 
         <fieldset>
          <label>
-           <p>Name</p>
-           <input name="name" />
+           <p>SKU</p>
+           <input name="SKU" />
          </label>
        </fieldset>
-       <button type="submit">Submit</button>
+       <button type="Submit Sku Data">Submit</button>
         </form>
       </header>
     </div>
