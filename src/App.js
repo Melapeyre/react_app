@@ -13,7 +13,7 @@ function App() {
     console.log(sku);
     console.log(QTY);
     console.log(timestamp);
-    console.log(counter);
+    console.log(Counter);
   }
   return (
       <div className = "App">
