@@ -6,6 +6,7 @@ function App() {
     event.preventDefault();
     const data = new FormData (event.target);
     alert('You have submitted the form.')
+    console.log (data)
   }
   return (
       <div className = "App">
