@@ -14,13 +14,18 @@ function App() {
   }
   const submitData=(e)=>{
     e.preventDefault();
+    if(builder && sku && qty && timestamp){
+
     const newData={builder:builder,sku:sku,qty:qty,timestamp:timestamp}
     setNewentry([...newEntry,newData]);
     setBuilder("");
     setSKU("");
     setQTY("");
     settimestamp("");
-
+    }
+    else{
+      alert("please fill out production form completely")
+    }
 
   }
 
