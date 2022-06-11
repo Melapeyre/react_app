@@ -1,19 +1,14 @@
-import React from "react";
+import React,{useState} from "react";
 import logo from './logo.svg';
 import './App.css'; 
 function App() {
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    const sku=e.target.SKU.value;
-    const Builder=e.target.Builder.value;
-    const QTY=e.target.QTY.value;
-    const timestamp=e.target.timestamp.value;
-    const Counter=e.target.Counter.value;
-    console.log(Builder);
-    console.log(sku);
-    console.log(QTY);
-    console.log(timestamp);
-    console.log(Counter);
+  const [builder,setBuilder]=useState("");
+  const [sku,setSKU]=useState("");
+  const [qty,setQTY]=useState("");
+  const [timestamp,settimestamp]=useState("");
+  
+  const myName=(e)=>{
+    setBuilder(e.target.value);
   }
   return (
       <div className = "App">
@@ -22,12 +17,12 @@ function App() {
         <h1> BoilBoss Internal APP</h1>
        
    <div>
-    <form onSubmit={handleSubmit}> 
+    <form>
       <fieldset>
          
  <p>Production Form</p>
          <div>
-           <input type = "text" name="Builder" placeholder = "Enter Name" />
+           <input type = "text" name="Builder" placeholder = "Enter Name" value={builder} onChange={myName}/>
           </div>
         
         <div>
@@ -47,7 +42,7 @@ function App() {
     </form>
   </div>
 
-<form onSubmit={handleSubmit}> 
+<form> 
         <fieldset>
   <p>Inventory Count</p>
        <div>
@@ -70,5 +65,5 @@ function App() {
       </header>
     </div>
   );
- }
+  } 
 export default App;
