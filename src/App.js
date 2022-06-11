@@ -48,13 +48,6 @@ function App() {
     }
   })
   }
-
-  const myName=(e)=>{
-    setBuilder(e.target.value);
-  }
-
-
-
   return (
       <div className = "App">
       < header className = "App-header" >
