@@ -12,10 +12,12 @@ function App() {
   const myName=(e)=>{
     setBuilder(e.target.value);
   }
-  const submitData=()=>{
+  const submitData=(e)=>{
+    e.preventDefault();
     const newData={builder:builder,sku:sku,qty:qty,timestamp:timestamp}
     setNewentry([newData]);
   }
+
 
   return (
       <div className = "App">
