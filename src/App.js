@@ -15,7 +15,7 @@ function App() {
   const submitData=(e)=>{
     e.preventDefault();
     const newData={builder:builder,sku:sku,qty:qty,timestamp:timestamp}
-    setNewentry([newData]);
+    setNewentry([...newEntry,newData]);
   }
 
 
