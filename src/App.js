@@ -55,28 +55,21 @@ function App() {
       </fieldset>
             <button class name = "btn btn-dark" type="Submit Production Form">Submit</button>
     </form>
+    <div className="production form">
+      {newEntry.map((values)=>{
+        return(
+           <>
+              <h2>{values.builder}</h2>
+              <h3>{values.sku}</h3>
+              <h4>{values.qty}</h4>
+               <h5>{values.tiumestamp}</h5>
+          </>
+        )
+           }
+       )}
+    </div>
+
   </div>
-
-<form> 
-        <fieldset>
-  <p>Inventory Count</p>
-       <div>
-           <input type = "text" name="Counter" placeholder = "Enter Name" />
-       </div>
-           
-        <div> 
-           <input type = "text" name="SKU" placeholder = "SKU" />
-           </div> 
-        <div>
-           <input type = "number" name ="QTY" placeholder = "Current Inventory"/>
-         </div>
-
-         <div>
-           <input type = "date" name ="timestamp" placeholder = "Date Counted"/>
-           </div> 
-       </fieldset>
-             <button class name = "btn btn-dark" type="Submit Inventory Count Form">Submit</button>
-        </form>
       </header>
     </div>
   );
