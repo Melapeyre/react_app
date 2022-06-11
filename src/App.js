@@ -6,10 +6,17 @@ function App() {
   const [sku,setSKU]=useState("");
   const [qty,setQTY]=useState("");
   const [timestamp,settimestamp]=useState("");
+  const [newEntry, setNewentry]=useState([]);
+
   
   const myName=(e)=>{
     setBuilder(e.target.value);
   }
+  const submitData=()=>{
+    const newData={builder:builder,sku:sku,qty:qty,timestamp:timestamp}
+    setNewentry([newData]);
+  }
+
   return (
       <div className = "App">
       < header className = "App-header" >
@@ -17,7 +24,7 @@ function App() {
         <h1> BoilBoss Internal APP</h1>
        
    <div>
-    <form>
+    <form onSubmit={submitData}>
       <fieldset>
          
  <p>Production Form</p>
