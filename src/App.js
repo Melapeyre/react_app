@@ -8,7 +8,7 @@ function App() {
     const Builder=e.target.Builder.value;
     const QTY=e.target.QTY.value;
     const timestamp=e.target.timestamp.value;
-    const Counter=e.target.counter.value;
+    const Counter=e.target.Counter.value;
     console.log(Builder);
     console.log(sku);
     console.log(QTY);
@@ -38,7 +38,7 @@ function App() {
 <form onSubmit={handleSubmit}> 
         <fieldset>
          <label>
-           <p>Production Form</p>
+           <p>Inventory Count</p>
            <input type = "text" name="Counter" placeholder = "Enter Name" />
            <input type = "text" name="SKU" placeholder = "SKU" />
            <input type = "number" name ="QTY" placeholder = "Current Inventory"/>
