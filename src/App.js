@@ -22,19 +22,19 @@ function App() {
          
  <p>Production Form</p>
          <div>
-           <input type = "text" name="Builder" placeholder = "Enter Name" value={builder} onChange={myName}/>
+           <input type = "text" name="Builder" placeholder = "Enter Name" value={builder} onChange={(e)=>{setBuilder(e.target.value)}}/>
           </div>
         
         <div>
-            <input type = "text" name="SKU" placeholder = "SKU" />
+            <input type = "text" name="SKU" placeholder = "SKU" value={sku} onChange={(e)=>{setSKU(e.target.value)}} />
          </div>
           
          <div>
-              <input type = "number" name ="QTY" placeholder = "QTY Built"/>
+              <input type = "number" name ="QTY" placeholder = "QTY Built" value={qty} onChange={(e)=>{setQTY(e.target.value)}}/>
           </div>
 
           <div>
-               <input type = "date" name ="timestamp" placeholder = "Date Completed"/>
+               <input type = "date" name ="timestamp" placeholder = "Date Completed" value={timestamp} onChange={(e)=>{settimestamp(e.target.value)}}/>
            </div>
       
       </fieldset>
