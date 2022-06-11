@@ -16,6 +16,12 @@ function App() {
     e.preventDefault();
     const newData={builder:builder,sku:sku,qty:qty,timestamp:timestamp}
     setNewentry([...newEntry,newData]);
+    setBuilder("");
+    setSKU("");
+    setQTY("");
+    settimestamp("");
+
+
   }
 
 
