@@ -60,9 +60,9 @@ function App() {
         return(
            <>
               <h2>{values.builder}</h2>
-              <h3>{values.sku}</h3>
-              <h4>{values.qty}</h4>
-               <h5>{values.tiumestamp}</h5>
+              <h2>{values.sku}</h2>
+              <h2>{values.qty}</h2>
+              <h2>{values.timestamp}</h2>
           </>
         )
            }
