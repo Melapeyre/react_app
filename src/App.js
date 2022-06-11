@@ -2,32 +2,57 @@ import React,{useState} from "react";
 import logo from './logo.svg';
 import './App.css'; 
 function App() {
-  const [builder,setBuilder]=useState("");
-  const [sku,setSKU]=useState("");
-  const [qty,setQTY]=useState("");
-  const [timestamp,settimestamp]=useState("");
-  const [newEntry, setNewentry]=useState([]);
+ 
+  const [newEntry, setNewentry]=useState({
+    builder:"",
+    sku:"",
+    qty:"",
+    timestamp:""
 
-  
+  });
+
+  const inputdata=(e)=>{
+  e.preventDefault();
+  const builder=e.target.builder;
+  const value=e.target.value;
+  setNewentry((previousData)=>{
+    console.log(previousData)
+    if(Name=='builder'){
+      return{
+        builder:value,
+        sku:previousData.sku,
+        qty:previousData.qty,
+        timestamp:previousData.timestamp
+      }
+    }else if(Name == "sku"){
+      return{
+        builder:previousData.builder,
+        sku:value,
+        qty:previousData.qty,
+        timestamp:previousData.timestamp
+      }
+    } else if (Name == "qty"){
+      return{
+        builder:previousData.builder,
+        sku:previousData.sku,
+        qty:value,
+        timestamp:previousData.timestamp
+      }
+    } else if (Name=="timestamp"){
+      return{
+        builder:previousData.builder,
+        sku:previousData.sku,
+        qty:previousData.qty,
+        timestamp:value
+      }
+    }
+  })
+  }
+
   const myName=(e)=>{
     setBuilder(e.target.value);
   }
-  const submitData=(e)=>{
-    e.preventDefault();
-    if(builder && sku && qty && timestamp){
 
-    const newData={builder:builder,sku:sku,qty:qty,timestamp:timestamp}
-    setNewentry([...newEntry,newData]);
-    setBuilder("");
-    setSKU("");
-    setQTY("");
-    settimestamp("");
-    }
-    else{
-      alert("please fill out production form completely")
-    }
-
-  }
 
 
   return (
@@ -37,42 +62,33 @@ function App() {
         <h1> BoilBoss Internal APP</h1>
        
    <div>
-    <form onSubmit={submitData}>
+    <form>
       <fieldset>
          
  <p>Production Form</p>
          <div>
-           <input type = "text" name="Builder" placeholder = "Enter Name" value={builder} onChange={(e)=>{setBuilder(e.target.value)}}/>
+           <input type = "text" name="Builder" placeholder = "Enter Name" value={newEntry.builder} Name = "builder" onChange={inputdata}/>
           </div>
         
         <div>
-            <input type = "text" name="SKU" placeholder = "SKU" value={sku} onChange={(e)=>{setSKU(e.target.value)}} />
+            <input type = "text" name="SKU" placeholder = "SKU" value={newEntry.sku} Name = "sku" onChange={inputdata} />
          </div>
           
          <div>
-              <input type = "number" name ="QTY" placeholder = "QTY Built" value={qty} onChange={(e)=>{setQTY(e.target.value)}}/>
+              <input type = "number" name ="QTY" placeholder = "QTY Built" value={newEntry.qty} Name = "qty" onChange={inputdata}/>
           </div>
 
           <div>
-               <input type = "date" name ="timestamp" placeholder = "Date Completed" value={timestamp} onChange={(e)=>{settimestamp(e.target.value)}}/>
+               <input type = "date" name ="timestamp" placeholder = "Date Completed" value={newEntry.timestamp} Name = "timestamp" onChange={inputdata}/>
            </div>
       
       </fieldset>
             <button class name = "btn btn-dark" type="Submit Production Form">Submit</button>
     </form>
-    <div className="production form">
-      {newEntry.map((values)=>{
-        return(
-           <>
-              <h2>{values.builder}</h2>
-              <h2>{values.sku}</h2>
-              <h2>{values.qty}</h2>
-              <h2>{values.timestamp}</h2>
-          </>
-        )
-           }
-       )}
-    </div>
+   <h1>{newEntry.builder}</h1> 
+   <h1>{newEntry.sku}</h1> 
+   <h1>{newEntry.qty}</h1> 
+   <h1>{newEntry.timestamp}</h1> 
 
   </div>
       </header>
