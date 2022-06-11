@@ -2,8 +2,19 @@ import React from "react";
 import logo from './logo.svg';
 import './App.css'; 
 function App() {
-
-
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const sku=e.target.SKU.value;
+    const Builder=e.target.Builder.value;
+    const QTY=e.target.QTY.value;
+    const timestamp=e.target.timestamp.value;
+    const Counter=e.target.Counter.value;
+    console.log(Builder);
+    console.log(sku);
+    console.log(QTY);
+    console.log(timestamp);
+    console.log(Counter);
+  }
   return (
       <div className = "App">
       < header className = "App-header" >
