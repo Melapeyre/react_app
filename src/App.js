@@ -13,32 +13,32 @@ function App() {
 
   const inputdata=(e)=>{
   e.preventDefault();
-  const builder=e.target.builder;
+  const name=e.target.builder;
   const value=e.target.value;
   setNewentry((previousData)=>{
     //console.log(previousData)
-    if(builder=='builder'){
+    if(name=='builder'){
       return{
         builder:value,
         sku:previousData.sku,
         qty:previousData.qty,
         timestamp:previousData.timestamp
       }
-    }else if(builder == "sku"){
+    }else if(name == "sku"){
       return{
         builder:previousData.builder,
         sku:value,
         qty:previousData.qty,
         timestamp:previousData.timestamp
       }
-    } else if (builder == "qty"){
+    } else if (name == "qty"){
       return{
         builder:previousData.builder,
         sku:previousData.sku,
         qty:value,
         timestamp:previousData.timestamp
       }
-    } else if (builder =="timestamp"){
+    } else if (name =="timestamp"){
       return{
         builder:previousData.builder,
         sku:previousData.sku,
