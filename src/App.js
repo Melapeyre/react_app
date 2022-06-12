@@ -3,7 +3,7 @@ import logo from './logo.svg';
 import './App.css'; 
 function App() {
  
-  const [newEntry, setNewentry]=useState({
+  const [newEntry, setNewentry]= useState({
     builder:"",
     sku:"",
     qty:"",
@@ -38,7 +38,7 @@ function App() {
         qty:value,
         timestamp:previousData.timestamp
       }
-    } else if (Name=="timestamp"){
+    } else if (Name =="timestamp"){
       return{
         builder:previousData.builder,
         sku:previousData.sku,
@@ -60,23 +60,23 @@ function App() {
          
  <p>Production Form</p>
          <div>
-           <input type = "text" name="Builder" placeholder = "Enter Name" value={newEntry.builder} Name = "builder" onChange={inputdata}/>
+           <input type = "text" Name="Builder" placeholder = "Enter Name" value={newEntry.builder} onChange={inputdata}/>
           </div>
         
         <div>
-            <input type = "text" name="SKU" placeholder = "SKU" value={newEntry.sku} Name = "sku" onChange={inputdata} />
+            <input type = "text" Name="SKU" placeholder = "SKU" value={newEntry.sku} onChange={inputdata} />
          </div>
           
          <div>
-              <input type = "number" name ="QTY" placeholder = "QTY Built" value={newEntry.qty} Name = "qty" onChange={inputdata}/>
+              <input type = "number" Name ="QTY" placeholder = "QTY Built" value={newEntry.qty} onChange={inputdata}/>
           </div>
 
           <div>
-               <input type = "date" name ="timestamp" placeholder = "Date Completed" value={newEntry.timestamp} Name = "timestamp" onChange={inputdata}/>
+               <input type = "date" Name ="timestamp" placeholder = "Date Completed" value={newEntry.timestamp} onChange={inputdata}/>
            </div>
       
       </fieldset>
-            <button class name = "btn btn-dark" type="Submit Production Form">Submit</button>
+            <button class Name = "btn btn-dark" type="Submit Production Form">Submit</button>
     </form>
    <h1>{newEntry.builder}</h1> 
    <h1>{newEntry.sku}</h1> 
