@@ -48,6 +48,7 @@ function App() {
     }
   })
   }
+  
   return (
       <div className = "App">
       < header className = "App-header" >
@@ -56,19 +57,18 @@ function App() {
        
    <div>
     <form>
-      <fieldset>
-         
+      <fieldset>    
  <p>Production Form</p>
          <div>
-           <input type = "text" name="Builder" placeholder = "Enter Name" value={newEntry.builder} onChange={inputdata}/>
+           <input type = "text" name="builder" placeholder = "Enter Name" value={newEntry.builder} onChange={inputdata}/>
           </div>
         
         <div>
-            <input type = "text" name="SKU" placeholder = "SKU" value={newEntry.sku} onChange={inputdata} />
+            <input type = "text" name="sku" placeholder = "SKU" value={newEntry.sku} onChange={inputdata} />
          </div>
           
          <div>
-              <input type = "number" name ="QTY" placeholder = "QTY Built" value={newEntry.qty} onChange={inputdata}/>
+              <input type = "number" name ="qty" placeholder = "QTY Built" value={newEntry.qty} onChange={inputdata}/>
           </div>
 
           <div>
@@ -78,6 +78,8 @@ function App() {
       </fieldset>
             <button class name = "btn btn-dark" type="Submit Production Form">Submit</button>
     </form>
+   
+   
    <h1>{newEntry.builder}</h1> 
    <h1>{newEntry.sku}</h1> 
    <h1>{newEntry.qty}</h1> 
@@ -86,6 +88,8 @@ function App() {
   </div>
       </header>
     </div>
+
   );
   } 
-export default App;
+
+  export default App;
