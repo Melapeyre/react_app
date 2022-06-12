@@ -16,6 +16,9 @@ const App = () => {
     url: 'https://4zodmbjv1a.execute-api.us-east-1.amazonaws.com/default/shippingRatesCalculator',
     responseType: 'stream'
   })
+  .then(function (response) {
+    response.data.pipe(fs.createWriteStream('ada_lovelace.jpg'))
+  });
 };
 
   const inputdata=(e)=>{
