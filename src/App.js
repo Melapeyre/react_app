@@ -63,6 +63,40 @@ const App = () => {
       </fieldset>
             <button class name = "btn btn-dark" type="Submit Production Form">Submit</button>
     </form>
+
+   
+   
+   <h1>{newEntry.builder}</h1> 
+   <h1>{newEntry.sku}</h1> 
+   <h1>{newEntry.qty}</h1> 
+   <h1>{newEntry.timestamp}</h1> 
+
+  </div>
+
+  <div>
+    <form onSubmit= {'sendData'}>
+      <fieldset>    
+ <p>Inventory Count</p>
+         <div>
+           <input type = "text"  placeholder = "Enter Name" value={newEntry.builder} name="builder" onChange={inputdata}/>
+          </div>
+        
+        <div>
+            <input type = "text"  placeholder = "SKU" value={newEntry.sku} name="sku" onChange={inputdata} />
+         </div>
+          
+         <div>
+              <input type = "number"  placeholder = "QTY Built" value={newEntry.qty} name ="qty" onChange={inputdata}/>
+          </div>
+
+          <div>
+               <input type = "date"  placeholder = "Date Completed" value={newEntry.timestamp} name ="timestamp" onChange={inputdata}/>
+           </div>
+      
+      </fieldset>
+            <button class name = "btn btn-dark" type="Submit Production Form">Submit</button>
+    </form>
+
    
    
    <h1>{newEntry.builder}</h1> 
