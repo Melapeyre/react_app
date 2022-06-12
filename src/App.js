@@ -13,7 +13,7 @@ const App = () => {
   const getData = () =>{
   axios({
     method: 'get',
-    url: 'https://4zodmbjv1a.execute-api.us-east-1.amazonaws.com/default/shippingRatesCalculator',
+    url: 'https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP',
     responseType: 'stream'
 
    .then(response => {
