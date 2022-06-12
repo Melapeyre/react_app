@@ -10,6 +10,17 @@ const App = () => {
     qty:"",
     timestamp:""
   });
+  const axios = require('axios').default;
+  const getData = axios.get('https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP')
+  .then(response => {
+    console.log(respnse);
+    // handle success
+  })
+  .catch(function (error) {
+    // handle error
+    console.log(error);
+  })
+
   const inputdata=(e)=>{
   e.preventDefault();
   const name=e.target.name;
@@ -29,7 +40,7 @@ const App = () => {
         <h1> BoilBoss Internal APP</h1>
        
    <div>
-    <form>
+    <form onSubmit={'getData'}>
       <fieldset>    
  <p>Production Form</p>
          <div>
