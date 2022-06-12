@@ -9,42 +9,15 @@ const App = () => {
     qty:"",
     timestamp:""
   });
-
   const inputdata=(e)=>{
   e.preventDefault();
   const name=e.target.name;
   const value=e.target.value;
   setNewentry((previousData)=>{
-    //console.log(previousData)
-    if(name=='builder'){
       return{
-        builder:value,
-        sku:previousData.sku,
-        qty:previousData.qty,
-        timestamp:previousData.timestamp
-      }
-    }else if(name == "sku"){
-      return{
-        builder:previousData.builder,
-        sku:value,
-        qty:previousData.qty,
-        timestamp:previousData.timestamp
-      }
-    } else if (name == "qty"){
-      return{
-        builder:previousData.builder,
-        sku:previousData.sku,
-        qty:value,
-        timestamp:previousData.timestamp
-      }
-    } else if (name =="timestamp"){
-      return{
-        builder:previousData.builder,
-        sku:previousData.sku,
-        qty:previousData.qty,
-        timestamp:value
-      }
-    }
+        ...previousData,
+        [name]:value
+      } 
   })
   }
   
