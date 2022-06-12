@@ -1,19 +1,18 @@
 import React,{useState} from "react";
 import logo from './logo.svg';
 import './App.css'; 
-function App() {
+const App = () => {
  
-  const [newEntry, setNewentry]= useState({
+  const [newEntry,setNewentry]=useState({
     builder:"",
     sku:"",
     qty:"",
     timestamp:""
-
   });
 
   const inputdata=(e)=>{
   e.preventDefault();
-  const name=e.target.builder;
+  const name=e.target.name;
   const value=e.target.value;
   setNewentry((previousData)=>{
     //console.log(previousData)
@@ -60,19 +59,19 @@ function App() {
       <fieldset>    
  <p>Production Form</p>
          <div>
-           <input type = "text" name="builder" placeholder = "Enter Name" value={newEntry.builder} onChange={inputdata}/>
+           <input type = "text"  placeholder = "Enter Name" value={newEntry.builder} name="builder" onChange={inputdata}/>
           </div>
         
         <div>
-            <input type = "text" name="sku" placeholder = "SKU" value={newEntry.sku} onChange={inputdata} />
+            <input type = "text"  placeholder = "SKU" value={newEntry.sku} name="sku" onChange={inputdata} />
          </div>
           
          <div>
-              <input type = "number" name ="qty" placeholder = "QTY Built" value={newEntry.qty} onChange={inputdata}/>
+              <input type = "number"  placeholder = "QTY Built" value={newEntry.qty} name ="qty" onChange={inputdata}/>
           </div>
 
           <div>
-               <input type = "date" name ="timestamp" placeholder = "Date Completed" value={newEntry.timestamp} onChange={inputdata}/>
+               <input type = "date"  placeholder = "Date Completed" value={newEntry.timestamp} name ="timestamp" onChange={inputdata}/>
            </div>
       
       </fieldset>
