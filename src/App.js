@@ -11,18 +11,20 @@ const App = () => {
     timestamp:""
   });
   axios = require('axios').default;
-  const sendData = () => {
-  axios
-    .post(
-      'https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP',
-     {builder:'builder'
-    }
-      )
-  .then(response => {
-    console.log(response);
-    // handle success
-  }) 
-  }
+ // const sendData = () => {
+ //  axios
+  //  .post(
+  //    'https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP',
+  //  {
+ //     builder:'builder'
+   // }
+   //   )
+ // }
+  axios.post('https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP', {
+    builder: 'builder',
+    sku: 'sku'
+  })
+
   const inputdata=(e)=>{
   e.preventDefault();
   const name=e.target.name;
