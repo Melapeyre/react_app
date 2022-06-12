@@ -10,7 +10,14 @@ const App = () => {
     qty:"",
     timestamp:""
   });
-  
+  const getData = () =>{
+  axios({
+    method: 'get',
+    url: 'https://4zodmbjv1a.execute-api.us-east-1.amazonaws.com/default/shippingRatesCalculator',
+    responseType: 'stream'
+  })
+};
+
   const inputdata=(e)=>{
   e.preventDefault();
   const name=e.target.name;
