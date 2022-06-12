@@ -16,7 +16,7 @@ function App() {
   const builder=e.target.builder;
   const value=e.target.value;
   setNewentry((previousData)=>{
-    console.log(previousData)
+    //console.log(previousData)
     if(builder=='builder'){
       return{
         builder:value,
