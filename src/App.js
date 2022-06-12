@@ -11,7 +11,7 @@ const App = () => {
     timestamp:""
   });
   const axios = require('axios').default;
-  const getData = axios.get('https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP')
+  getData = axios.get('https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP')
   .then(response => {
     console.log(respnse);
     // handle success
