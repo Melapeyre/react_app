@@ -15,6 +15,10 @@ const App = () => {
     method: 'get',
     url: 'https://4zodmbjv1a.execute-api.us-east-1.amazonaws.com/default/shippingRatesCalculator',
     responseType: 'stream'
+
+   .then(response => {
+     console.log(response);
+   })
   })
 };
 
