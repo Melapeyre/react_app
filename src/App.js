@@ -13,13 +13,12 @@ const App = () => {
   const axios = require('axios').default;
   getData = axios.get('https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP')
   .then(response => {
-    console.log(respnse);
+    console.log(response);
     // handle success
   })
-  .catch(function (error) {
-    // handle error
-    console.log(error);
-  })
+  .catch(err =>{
+    console.log(err);
+  });
 
   const inputdata=(e)=>{
   e.preventDefault();
