@@ -2,25 +2,29 @@ import React,{useState} from "react";
 import logo from './logo.svg';
 import './App.css'; 
 import axios from 'axios';
+import './form.css';
 
 const App = () => {
   const [newEntry,setNewentry]=useState({
     builder:"",
     sku:"",
     qty:"",
-    timestamp:""
-  });
-  const getData = () =>{
-  axios({
-    method: 'get',
-    url: 'https://svc62y5jg2.execute-api.us-east-1.amazonaws.com/default/BoilBoss_APP',
-    responseType: 'stream'
+    timestamp:"",
 
-   .then(response => {
-     console.log(response);
-   })
-  })
-};
+  });
+ 
+const api = axios.create({
+  baseURL:'https://2nto10r5ua.execute-api.us-east-1.amazonaws.com/default/BoilBoss_App'
+
+})
+
+  constructor() ;{
+    super();
+    api.get('/').then(res=>{
+      console.log(res.data)
+    })
+  }
+
 
   const inputdata=(e)=>{
   e.preventDefault();
@@ -40,7 +44,7 @@ const App = () => {
         <img src={logo} className = "App-logo" alt="logo"/>
         <h1> BoilBoss Internal APP</h1>
        
-   <div>
+   <div className="form-box1">
     <form onSubmit= {'sendData'}>
       <fieldset>    
  <p>Production Form</p>
@@ -74,7 +78,7 @@ const App = () => {
   </div>
 
   <div>
-    <form onSubmit= {'sendData'}>
+    <form>
       <fieldset>    
  <p>Inventory Count</p>
          <div>
