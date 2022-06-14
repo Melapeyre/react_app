@@ -13,18 +13,19 @@ const App = () => {
 
   });
  
-const api = axios.create({
-  baseURL:'https://2nto10r5ua.execute-api.us-east-1.amazonaws.com/default/BoilBoss_App'
-})
-constructor()
-  super();
-  api.get('/').then(res=>{
-    console.log(res.data)
-  })
+  const getData = () =>{
+    axios({
+      method: 'get',
+      url: 'https://2nto10r5ua.execute-api.us-east-1.amazonaws.com/default/BoilBoss_App',
+      responseType: 'stream'
+  
+     .then(res => {
+       console.log(res.data);
+     })
+    })
+  };
+  
 
-
-
- 
   const inputdata=(e)=>{
   e.preventDefault();
   const name=e.target.name;
