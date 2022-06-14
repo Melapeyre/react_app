@@ -12,7 +12,7 @@ const App = () => {
     timestamp:"",
 
   });
- 
+
   const getData = () =>{
     axios({
       method: 'get',
@@ -25,6 +25,7 @@ const App = () => {
     })
   };
   
+  state ={[(...setNewentry,newEntry)]}
 
   const inputdata=(e)=>{
   e.preventDefault();
@@ -32,7 +33,7 @@ const App = () => {
   const value=e.target.value;
   setNewentry((previousData)=>{
       return{
-        ...previousData,
+       state,
         [name]:value
       } 
   })
