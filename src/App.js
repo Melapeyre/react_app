@@ -29,6 +29,9 @@ const App = () => {
         <h1> BoilBoss Internal APP</h1>
        
    <div>
+   
+   
+   
    <a href="https://2nto10r5ua.execute-api.us-east-1.amazonaws.com/quickbooksAuthRedirect" target="_blank" rel="noreferrer">
           <button>Click</button>
         </a>
