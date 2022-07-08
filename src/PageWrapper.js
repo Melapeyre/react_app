@@ -1,6 +1,8 @@
 import React from 'react';
 import { Card, Row } from 'react-bootstrap';
 
+// This component goes around any page component
+// and does basic page header and layout formatting
 export default function PageWrapper(props) {
 	return (
 		<Card style={{width: '100%'}}>

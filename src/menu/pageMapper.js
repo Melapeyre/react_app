@@ -1,6 +1,7 @@
-import Home from './pages/Home.js';
-import Production from './pages/Production.js';
+import Home from '../pages/Home.js';
+import Production from '../pages/Production.js';
 
+// 
 const pageMapper = {
 	production: <Production />,
 	home: <Home />

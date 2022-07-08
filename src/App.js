@@ -1,8 +1,4 @@
 import React from "react";
-import './App.css'; 
-import MainMenu from "./components/MainMenu";
-import pageMapper from "./pageMapper.js";
-import PageWrapper from "./PageWrapper";
 
 import {
   BrowserRouter as Router,
@@ -10,20 +6,35 @@ import {
   Route
 } from "react-router-dom";
 
+// Components
+import MainMenu from "./components/MainMenu";
+import PageWrapper from "./PageWrapper";
 import { Row, Col } from 'react-bootstrap';
+
+// Stylesheets
+import './App.css'; 
 import "./styles/MainMenu.css";
 
+// Constants
+import pageMapper from "./pageMapper.js";
+
+
+// General layout for app
+// - Menu on sidebar
+// - Page on the right
+// - Uses pageMapper to dynamically show menu
+//   and match routes
 export default function App(props) {
 	if (!props.menuPages) return null;
 
 	return (
 		<Router>
-				<link
-					rel="stylesheet"
-					href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-					integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-					crossOrigin="anonymous"
-					/>
+			<link
+				rel="stylesheet"
+				href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
+				integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
+				crossOrigin="anonymous"
+				/>
 			<Row className="m-3">
 				<Col id="sidebar-wrapper">
 					<MainMenu
@@ -46,6 +57,7 @@ export default function App(props) {
 									/>
 							)	
 						})}
+						{/* Add a 404 route here */}
 					</Routes>
 					</div>
 				</Col>
@@ -53,42 +65,6 @@ export default function App(props) {
 		</Router>
 	);
 }
-
-// export default function App () {
-//   return (
-// 	<Router>
-// 	  <div>
-// 		<nav>
-// 		  <ul>
-// 			<li>
-// 			  <Link to="/">Home</Link>
-// 			</li>
-// 			<li>
-// 			  <Link to="/about">About</Link>
-// 			</li>
-// 			<li>
-// 			  <Link to="/users">Users</Link>
-// 			</li>
-// 		  </ul>
-// 		</nav>
-
-// 		{/* A <Switch> looks through its children <Route>s and
-// 			renders the first one that matches the current URL. */}
-// 		<Switch>
-// 		  <Route path="/about">
-// 			<About />
-// 		  </Route>
-// 		  <Route path="/users">
-// 			<Users />
-// 		  </Route>
-// 		  <Route path="/">
-// 			<Home />
-// 		  </Route>
-// 		</Switch>
-// 	  </div>
-// 	</Router>
-//   );
-// }
 
 // function Home() {
 //   return <h2>Home</h2>;
