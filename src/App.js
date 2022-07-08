@@ -7,16 +7,16 @@ import {
 } from "react-router-dom";
 
 // Components
-import MainMenu from "./components/MainMenu";
-import PageWrapper from "./PageWrapper";
+import MainMenu from "./menu/MainMenu.js";
+import PageWrapper from "./PageWrapper.js";
 import { Row, Col } from 'react-bootstrap';
 
 // Stylesheets
 import './App.css'; 
-import "./styles/MainMenu.css";
+import "./menu/MainMenu.css";
 
 // Constants
-import pageMapper from "./pageMapper.js";
+import { pageMapper } from "./menu/menuPages.js";
 
 
 // General layout for app
@@ -29,12 +29,6 @@ export default function App(props) {
 
 	return (
 		<Router>
-			<link
-				rel="stylesheet"
-				href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css"
-				integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We"
-				crossOrigin="anonymous"
-				/>
 			<Row className="m-3">
 				<Col id="sidebar-wrapper">
 					<MainMenu
@@ -65,19 +59,6 @@ export default function App(props) {
 		</Router>
 	);
 }
-
-// function Home() {
-//   return <h2>Home</h2>;
-// }
-
-// function About() {
-//   return <h2>About</h2>;
-// }
-
-// function Users() {
-//   return <h2>Users</h2>;
-// }
-
 
 // const App = () => {
 //   const [newEntry,setNewentry]=useState({

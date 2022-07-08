@@ -1,13 +1,10 @@
 import React from 'react';
 import MenuCard from './MenuCard';
 import { Container, Row, Nav } from "react-bootstrap";
-import "./../styles/MainMenu.css";
+import "./MainMenu.css";
 
-/**
- * Functional component that displays the menu
- * for the current user
- * @returns {React.Component}
- */
+// Displays the side menu based on the pages
+// passed through props
 export default function MainMenu(props) {
 	return ( 
 		<Nav className={`col-md-2 d-none d-md-block nav sidebar main-nav`}>
