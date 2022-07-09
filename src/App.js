@@ -10,6 +10,7 @@ import {
 import MainMenu from "./menu/MainMenu.js";
 import PageWrapper from "./PageWrapper.js";
 import { Row, Col } from 'react-bootstrap';
+import DocsPage from './apidocs/DocsPage.js';
 
 // Stylesheets
 import './App.css'; 
@@ -51,6 +52,11 @@ export default function App(props) {
 									/>
 							)	
 						})}
+						<Route
+							key='route-docs'
+							path='/docs'
+							element={<DocsPage />}
+							/>
 						{/* Add a 404 route here */}
 					</Routes>
 					</div>

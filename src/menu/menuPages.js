@@ -11,7 +11,7 @@ export const menuPages = [
 		pageTitle: 'Production',
 		url: 'production'
 	}
-]
+];
 
 // Maps urls to Page components
 export const pageMapper = {
