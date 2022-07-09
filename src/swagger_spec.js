@@ -1,4 +1,4 @@
-{
+export const swaggerSpec = {
 	"swagger": "2.0",
 	"info": {
 	   "description": "This is the backend for the software system for The Boil Boss",
