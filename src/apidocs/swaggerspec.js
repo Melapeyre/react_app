@@ -14,8 +14,8 @@ export const swaggerSpec = {
 	   "https"
 	],
 	"paths": {
-	   "/InventoryProduced": {
-		  "post": {
+	   "/finishedinventory": {
+		  "put": {
 			 "summary": "Update Inventory Management System to reflect new inventory that has been produced",
 			 "description": "",
 			 "consumes": [
@@ -40,9 +40,7 @@ export const swaggerSpec = {
 				   "description": "OK"
 				}
 			 }
-		  }
-	   },
-	   "/finishedInventoryCount": {
+		  },
 		  "post": {
 			 "summary": "Update Inventory Management System to reflect a manual count of inventory",
 			 "description": "",
@@ -68,9 +66,7 @@ export const swaggerSpec = {
 				   "description": "OK"
 				}
 			 }
-		  }
-	   },
-	   "/getCurrentFinishedInventory": {
+		  },
 		  "get": {
 			 "summary": "Get the current inventory levels for all skus",
 			 "description": "",
