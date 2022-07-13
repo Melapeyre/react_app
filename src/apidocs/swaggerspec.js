@@ -246,6 +246,12 @@ export const swaggerSpec = {
 			 },
 			 "count": {
 				"type": "integer"
+			 },
+			 "productType": {
+				"type": "string"
+			 },
+			 "name": {
+				"type": "string"
 			 }
 		  },
 		  "required": [
