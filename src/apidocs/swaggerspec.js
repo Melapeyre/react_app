@@ -86,7 +86,7 @@ export const swaggerSpec = {
 			 }
 		  }
 	   },
-	   "/quickbooksAuthCode": {
+	   "/quickbooks/authcode": {
 		  "get": {
 			 "summary": "Gets refresh token for quickbooks user after they authorize the app",
 			 "description": "",
@@ -106,7 +106,7 @@ export const swaggerSpec = {
 			 }
 		  }
 	   },
-	   "/quickbooksAuthRedirect": {
+	   "/quickbooks/authredirect": {
 		  "get": {
 			 "summary": "Initiates user to log in with quickbooks",
 			 "description": "",
@@ -117,7 +117,7 @@ export const swaggerSpec = {
 			 }
 		  }
 	   },
-	   "/quickbooksHandler": {
+	   "/webhooks/quickbooks": {
 		  "post": {
 			 "summary": "Webhook that Queues updates to the Inventory Management System to reflect depleted inventory as a result of wholesale invoices on Quickbooks",
 			 "description": "",
@@ -142,7 +142,7 @@ export const swaggerSpec = {
 			 }
 		  }
 	   },
-	   "/shipstationOrdersWebhookListener": {
+	   "/webhooks/shipstation": {
 		  "post": {
 			 "summary": "Webhook that Queues updates to the Inventory Management System to reflect depleted inventory as a result of orders shipped via Shipstation",
 			 "description": "",
