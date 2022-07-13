@@ -21,7 +21,7 @@ class CurrentInventory extends React.Component {
 	};
 
 	let response = await fetch(
-	  "https://2nto10r5ua.execute-api.us-east-1.amazonaws.com/getCurrentFinishedInventory",
+	  "https://2nto10r5ua.execute-api.us-east-1.amazonaws.com/finishedinventory",
 	  requestOptions
 	);
 	let data = await response.json();
