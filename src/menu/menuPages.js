@@ -1,6 +1,7 @@
 import Home from '../pages/Home.js';
 import Production from '../pages/Production.js';
 import CurrentInventory from '../pages/CurrentInventory.js';
+import ManualInventoryCount from '../pages/ManualInventoryCount.js';
 
 // Maps urls to page titles
 export const menuPages = [
@@ -13,6 +14,10 @@ export const menuPages = [
 		url: 'production'
 	},
 	{
+		pageTitle: 'Manual Inventory Count',
+		url: 'manualinventorycount'
+	},
+	{
 		pageTitle:'Current Inventory',
 		url:'currentinventory'
 	}
@@ -22,5 +27,6 @@ export const menuPages = [
 export const pageMapper = {
 	production: <Production />,
 	home: <Home />,
-	currentinventory: <CurrentInventory/>
+	currentinventory: <CurrentInventory/>,
+	manualinventorycount: <ManualInventoryCount />
 };

@@ -2,7 +2,7 @@ import React from "react";
 
 //mapping name and count from full inventory list
 function mapperFunc (obj) {
-    return <p>{obj.name}({obj.sku}):{obj.count}</p>
+    return <p key={obj.sku}>{obj.name}({obj.sku}):{obj.count}</p>
 }
 
 class CurrentInventory extends React.Component {

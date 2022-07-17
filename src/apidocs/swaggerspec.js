@@ -240,7 +240,7 @@ export const swaggerSpec = {
 			 "sku": {
 				"type": "string"
 			 },
-			 "count": {
+			 "qty": {
 				"type": "integer"
 			 },
 			 "productType": {
@@ -252,7 +252,7 @@ export const swaggerSpec = {
 		  },
 		  "required": [
 			 "sku",
-			 "count"
+			 "qty"
 		  ]
 	   }
 	}
