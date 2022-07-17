@@ -1,5 +1,5 @@
 import React from 'react';
-import InventoryInput from './../components/InventoryInput.js';
+import InventoryInput from './InventoryInput.js';
 
 function manualInventoryCount(body) {
 	var myHeaders = new Headers();
