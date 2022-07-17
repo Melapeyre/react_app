@@ -1,5 +1,5 @@
 import React from 'react';
-import InventoryInput from '../components/InventoryInput.js';
+import InventoryInput from './../components/InventoryInput.js';
 
 function producedInventoryChanges(body) {
 	var myHeaders = new Headers();

@@ -1,10 +1,9 @@
 import React, { useState, useEffect } from "react";
 import Button from 'react-bootstrap/Button';
-import './InventoryInput.css';
 
 // const productTypes = ['BoilBoss', 'Paddle'];
 
-export default function InventoryInput(props) {
+export default function Stuff(props) {
     const [productTypes, setProductTypes] = useState([]);
     const [selectedProductType, selectProductType] = useState('');
 
